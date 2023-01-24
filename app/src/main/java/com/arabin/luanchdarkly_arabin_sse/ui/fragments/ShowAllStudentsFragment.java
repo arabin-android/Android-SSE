@@ -16,6 +16,12 @@ import com.arabin.roomdb.model.MainData;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+ * @author Arabin
+ * Shows all students
+ * with at least 1 exam score
+ * */
 public class ShowAllStudentsFragment extends BaseFragment {
 
     protected MainFragmentBinding binding;

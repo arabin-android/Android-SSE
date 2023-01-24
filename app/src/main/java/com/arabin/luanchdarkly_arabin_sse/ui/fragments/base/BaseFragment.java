@@ -20,6 +20,10 @@ import java.util.List;
 
 import dagger.hilt.android.AndroidEntryPoint;
 
+/**
+ * @author Arabin
+ * BaseFragment handles all common operations
+ * */
 @AndroidEntryPoint
 public abstract class BaseFragment extends Fragment implements
         SearchView.OnQueryTextListener, MainDataAdapter.IPassOnItemClick {

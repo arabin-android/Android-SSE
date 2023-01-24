@@ -2,6 +2,11 @@ package com.arabin.luanchdarkly_arabin_sse.ui.fragments.helper;
 
 import androidx.navigation.NavOptions;
 
+/**
+ * @author Arabin
+ * An Util class
+ * used for fragment tansaction anim
+ * */
 public class NavigationHelper {
 
     public static NavOptions getNavigationOption(){

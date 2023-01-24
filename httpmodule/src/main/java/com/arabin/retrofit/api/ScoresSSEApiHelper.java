@@ -1,6 +1,6 @@
 package com.arabin.retrofit.api;
 
-import com.arabin.retrofit.httphelper.EventSource;
+import com.arabin.retrofit.httphelper.EventSourceHelper;
 import com.arabin.retrofit.httphelper.IPassDataInterface;
 
 import org.jetbrains.annotations.NotNull;
@@ -12,14 +12,19 @@ import javax.inject.Inject;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.sse.EventSource;
 import okhttp3.sse.EventSources;
 
-
+/**
+ * @author Arabin
+ * Api helper
+ * Starts the service in backgorund
+ * */
 public class ScoresSSEApiHelper {
 
     private final Request request;
     private final OkHttpClient client;
-    private okhttp3.sse.EventSource eventSource;
+    private EventSource eventSource;
 
     @Inject
     public ScoresSSEApiHelper(@NotNull Request request, @NotNull OkHttpClient client){
@@ -36,7 +41,7 @@ public class ScoresSSEApiHelper {
 
     public void onStartEvents(IPassDataInterface iPassDataInterface) {
         Executor executor = Executors.newSingleThreadExecutor();
-        EventSource eventSourceHelper = new EventSource(iPassDataInterface);
+        EventSourceHelper eventSourceHelper = new EventSourceHelper(iPassDataInterface);
         executor.execute(() -> {
             eventSource = EventSources.createFactory(client)
                     .newEventSource(request, eventSourceHelper);

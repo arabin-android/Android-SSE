@@ -12,11 +12,15 @@ import com.arabin.roomdb.model.MainData;
 
 import java.util.List;
 
+/**
+ * @author Arabin
+ * Main data adapter
+ * */
 public class MainDataAdapter extends RecyclerView.Adapter<MainDataViewHolder> {
 
 
     private final List<MainData>items;
-    private IPassOnItemClick iPassOnItemClick;
+    private final IPassOnItemClick iPassOnItemClick;
 
     public MainDataAdapter(List<MainData> data, IPassOnItemClick aIPassOnItemClickInterface){
         items = data;

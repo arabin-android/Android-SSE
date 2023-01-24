@@ -12,12 +12,17 @@ import com.google.gson.JsonObject;
 import okhttp3.Response;
 import okhttp3.sse.EventSourceListener;
 
-public class
-EventSource extends EventSourceListener {
+
+/**
+ * @author Arabin
+ * The main listener
+ * that listens to all SSE actions
+ * */
+public class EventSourceHelper extends EventSourceListener {
 
     private final IPassDataInterface iPassDataInterface;
 
-    public EventSource(IPassDataInterface iPassDataInterface){
+    public EventSourceHelper(IPassDataInterface iPassDataInterface){
         this.iPassDataInterface = iPassDataInterface;
     }
 

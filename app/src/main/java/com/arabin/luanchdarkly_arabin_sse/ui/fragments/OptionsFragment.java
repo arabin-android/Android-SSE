@@ -16,6 +16,11 @@ import com.arabin.luanchdarkly_arabin_sse.R;
 import com.arabin.luanchdarkly_arabin_sse.databinding.OptionsFragmentBinding;
 import com.arabin.luanchdarkly_arabin_sse.ui.fragments.helper.NavigationHelper;
 
+/**
+ * @author Arabin
+ * A fragment that shows
+ * the options to choose
+ * */
 public class OptionsFragment extends Fragment implements View.OnClickListener{
 
     @Override

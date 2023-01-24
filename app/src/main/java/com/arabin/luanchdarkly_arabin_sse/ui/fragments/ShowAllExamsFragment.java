@@ -11,6 +11,12 @@ import com.arabin.roomdb.model.MainData;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+ * @author Arabin
+ * Shows all exams that
+ * has been recorded
+* */
 public class ShowAllExamsFragment extends ShowAllStudentsFragment{
 
     @Override

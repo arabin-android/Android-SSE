@@ -8,6 +8,10 @@ import org.jetbrains.annotations.NotNull;
 import javax.inject.Inject;
 
 
+/**
+ * @author Arabin
+ * Main repository to start/stop SSE
+ * */
 public class MainRepo {
 
     private final ScoresSSEApiHelper scoresSSEApiHelper;

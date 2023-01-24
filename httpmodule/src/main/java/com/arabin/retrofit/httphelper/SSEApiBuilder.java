@@ -18,6 +18,14 @@ import dagger.hilt.components.SingletonComponent;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 
+
+/**
+ * @author Arabin
+ * Hilt module
+ * provides dependencies
+ * to call Api
+ * */
+
 @Module
 @InstallIn(SingletonComponent.class)
 public class SSEApiBuilder {
