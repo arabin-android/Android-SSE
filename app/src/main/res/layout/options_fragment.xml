@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/show_all_students"
+        android:id="@+id/show_all_students"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button_selector"
+        android:textSize="14sp"
+        android:textAllCaps="false"
+        android:textColor="@color/purple_700"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/show_all_exam_results"
+        android:id="@+id/show_all_exams"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button_selector"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/purple_700"
+        android:textAllCaps="false"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"/>
+
+</LinearLayout>

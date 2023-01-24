@@ -1,0 +1,73 @@
+plugins {
+    id 'com.google.dagger.hilt.android'
+    id 'com.android.library'
+}
+
+android {
+    namespace 'com.arabin.retrofit'
+    compileSdk 33
+
+    defaultConfig {
+        minSdk 21
+        targetSdk 33
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+        buildConfigField 'String', 'SCORES_BASE_URL', "\"https://live-test-scores.herokuapp.com/\""
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'com.google.android.material:material:1.7.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+
+    //Gson
+    implementation 'com.google.code.gson:gson:2.9.0'
+    implementation 'com.google.dagger:hilt-android:2.44'
+    annotationProcessor 'com.google.dagger:hilt-android-compiler:2.44'
+
+    implementation "com.squareup.okhttp3:okhttp:4.10.0"
+
+    // Server Sent Events
+    implementation "com.squareup.okhttp3:okhttp-sse:4.9.3"
+    testImplementation "com.squareup.okhttp3:okhttp-sse:4.9.3"
+
+
+    testImplementation("com.squareup.okhttp3:mockwebserver:4.10.0")
+    testImplementation 'org.mockito:mockito-all:1.10.19'
+    testImplementation 'net.javacrumbs.json-unit:json-unit-fluent:1.5.6'
+    testImplementation 'com.squareup.assertj:assertj-android-recyclerview-v7:1.1.0@aar'
+
+    androidTestImplementation 'org.mockito:mockito-core:4.3.1'
+    androidTestImplementation "com.crittercism.dexmaker:dexmaker-mockito:4.3.1"
+
+    //    Testing
+    testImplementation 'com.squareup.assertj:assertj-android:1.1.0'
+    testImplementation 'org.robolectric:robolectric:4.4'
+    testImplementation('org.robolectric:shadows-support-v4:3.0') {
+        exclude module: 'support-v4'
+    }
+
+    testAnnotationProcessor 'com.google.dagger:hilt-android-compiler:2.44'
+    testImplementation 'com.google.dagger:hilt-android-testing:2.44@aar'
+    androidTestAnnotationProcessor 'com.google.dagger:hilt-android-compiler:2.44'
+
+    api project(path:':roomdb')
+
+}

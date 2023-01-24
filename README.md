@@ -37,3 +37,10 @@ That said, we'd like you to cut some corners so we can focus on certain aspects 
 The spec is intentionally a little underspecified. We're looking for a functional mobile app that meets the criteria above, but there are no "gotchas," and there is no single "right" solution. Please use your best judgment and be prepared to explain your decisions in the on-site review.
 
 That's it. Commit your solution to the provided GitHub repository (this one) and submit the solution using the Greenhouse link we emailed you. When you come in, we'll pair with you and walk through your solution and extend it in an interesting way.
+
+
+##Instructions to install
+* Simply clone the repository
+* Import it in Android Studio
+* Build the project in Emulator or Physical Device
+* Launch and test the project

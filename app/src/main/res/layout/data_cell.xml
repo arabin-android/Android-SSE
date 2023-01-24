@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="data"
+            type="com.arabin.roomdb.model.MainData" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent=".33"
+            android:layout_height="wrap_content"
+            android:id="@+id/student_id"
+            android:drawableStart="@drawable/st_id"
+            android:text="@{data.studentId}"
+            android:maxLines="1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:gravity="center_vertical"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/student_id"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent=".33"
+            android:layout_height="wrap_content"
+            android:id="@+id/exma_id"
+            android:drawableStart="@drawable/st_exam"
+            android:layout_weight="1"
+            android:text="@{data.exam}"
+            android:maxLines="1"
+            android:gravity="center_vertical"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/exma_id"
+            app:layout_constraintWidth_percent=".33"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/student_score"
+            android:drawableStart="@drawable/st_score"
+            android:layout_weight="1"
+            android:text="@{ data.score}"
+            android:maxLines="1"
+            android:gravity="center_vertical"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

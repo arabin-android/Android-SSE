@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splash_fragment">
+
+    <fragment
+        android:id="@+id/splash_fragment"
+        android:name="com.arabin.luanchdarkly_arabin_sse.ui.fragments.WelcomeScreen"
+        android:label="@null"
+        tools:layout="">
+        <action
+            android:id="@+id/action_splash_fragment_to_details_fragment"
+            app:destination="@id/list_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/list_fragment"
+        android:name="com.arabin.luanchdarkly_arabin_sse.ui.fragments.OptionsFragment"
+        tools:layout="@layout/options_fragment">
+        <action
+            android:id="@+id/action_list_fragment_to_student_fragment_by_score"
+            app:destination="@id/student_fragment_by_score" />
+        <action
+            android:id="@+id/action_list_fragment_to_fragment_by_exam"
+            app:destination="@id/fragment_by_exam" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/student_fragment_by_score"
+        android:name="com.arabin.luanchdarkly_arabin_sse.ui.fragments.ShowAllStudentsFragment"
+        tools:layout="@layout/main_fragment" />
+
+    <fragment
+        android:id="@+id/fragment_by_exam"
+        android:name="com.arabin.luanchdarkly_arabin_sse.ui.fragments.ShowAllExamsFragment"
+        tools:layout="@layout/main_fragment" />
+
+</navigation>
